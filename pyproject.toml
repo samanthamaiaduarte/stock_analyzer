@@ -1,0 +1,22 @@
+[project]
+name = "stock-analyzer"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "samanthamaiaduarte",email = "sam.maiaduarte@outlook.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0.0"
+dependencies = [
+    "pandas (>=3.0.0,<4.0.0)",
+    "yfinance (>=1.1.0,<2.0.0)",
+    "langchain-groq (>=1.1.2,<2.0.0)",
+    "fastapi[standard] (>=0.128.2,<0.129.0)"
+] 
+
+[tool.poetry]
+packages = [{include = "stock_analyzer", from = "."}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

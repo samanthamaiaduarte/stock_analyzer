@@ -1,0 +1,1 @@
+A RestAPI that provides an opinion on a given stock, based on opinions about that stock on X, recent Google news, and the stock's statistics over the past year.

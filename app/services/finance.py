@@ -1,5 +1,6 @@
-from yfinance import Ticker
 import pandas as pd
+from yfinance import Ticker
+from requests.exceptions import HTTPError
 
 class Finance:
 
@@ -9,7 +10,8 @@ class Finance:
         self.interval = interval
 
     def __get_history(self) -> pd.DataFrame:
-        return Ticker(ticker=self.ticker).history(period=self.period, interval=self.interval)
+        result = Ticker(ticker=self.ticker).history(period=self.period, interval=self.interval) 
+        return result
     
     def __calc_rsi(self, delta: pd.Series, period: int = 14) -> float:
         #Calculating gains and losses
